@@ -1,0 +1,28 @@
+# 请保存为UTF-8格式
+spring:
+  profiles:
+    active:
+    - dev
+
+---
+server:
+  port: 8021
+spring:
+  profiles: dev  #开发环境
+  application:
+    name: springcloud-config-client
+eureka:
+  client:
+    service-url:
+      defalultZone: http://eureke-dev.com:7001/eureka/
+---
+server:
+  port: 8022
+spring:
+  profiles: test  #开发环境
+  application:
+    name: springcloud-config-client
+eureka:
+  client:
+    service-url:
+      defalultZone: http://eureke-dev.com:7001/eureka/
